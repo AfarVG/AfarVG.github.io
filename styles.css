@@ -1,0 +1,33 @@
+.font-bold {
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-light {
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    font-weight: 390;
+    font-style: normal;
+}
+
+.button {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 1.3rem;
+    color: #494949;
+    background-color: #cfcfcf;
+    border-width: 2px;
+    border-color: #494949;
+    border-style: solid;
+    transition: ease-in-out;
+    transition-duration: 300ms;
+}
+
+.button:hover{
+    color: #cfcfcf;
+    background-color: #494949;
+}
