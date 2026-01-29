@@ -36,3 +36,74 @@ html {
     color: #cfcfcf;
     background-color: #494949;
 }
+
+.project-cards{
+    width: 70%;
+    aspect-ratio: 16/9; 
+    margin: auto; 
+    margin-block: 0; 
+    position: relative; 
+    filter:drop-shadow(5px 5px 10px #686868); 
+    transition: ease-in-out;
+    transition-duration: 300ms;
+}
+
+.project-cards:hover{
+    scale: 102%;
+}
+
+.project-card{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    border-radius: 10px;
+    transform-origin: right center;
+    transition: ease-in-out;
+}
+
+.project-cards .project-card:nth-child(1) {
+    z-index: 5;
+}
+
+/* 2º elemento */
+.project-cards .project-card:nth-child(2) {
+    z-index: 4;
+    transition-duration: 210ms;
+}
+
+/* 3º elemento */
+.project-cards .project-card:nth-child(3) {
+    z-index: 3;
+    transition-duration: 240ms;
+}
+
+.project-cards .project-card:nth-child(4) {
+    z-index: 2;
+    transition-duration: 270ms;
+}
+
+.project-cards .project-card:nth-child(5) {
+    z-index: 1;
+    transition-duration: 300ms;
+}
+
+.project-cards:hover .project-card:nth-child(2){
+    transform: rotate(2deg);
+}
+
+.project-cards:hover .project-card:nth-child(3){
+    transform: rotate(4deg);
+}
+
+.project-cards:hover .project-card:nth-child(4){
+    transform: rotate(6deg);
+}
+
+.project-cards:hover .project-card:nth-child(5){
+    transform: rotate(8deg);
+}
