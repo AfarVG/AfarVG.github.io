@@ -4,7 +4,7 @@ body {
 }
 
 .bg_heart {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -86,3 +86,4 @@ body {
   position: absolute;
   z-index: 10;
 }
+
