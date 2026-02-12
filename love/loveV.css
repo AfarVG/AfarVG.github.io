@@ -1,7 +1,4 @@
 h1,
-p {
-	font-family: 'Hind', sans-serif;
-}
 
 p{
 	text-indent: 50px;
@@ -41,7 +38,7 @@ body {
 .message {
 	padding: 40px;
 	background-color: #eee;
-	min-width: 400px;
+	min-width: 80%;
 	height: 75%;
 	position: absolute;
 	left: 50%;
