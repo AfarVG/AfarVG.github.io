@@ -30,3 +30,47 @@ $(document).ready(function () {
         }, 'slow');
     });
 });
+
+  const audio = document.getElementById("audio");
+  const btnPlayPause = document.getElementById("btnPlayPause");
+  const seekBar = document.getElementById("seekBar");
+  const currentTimeEl = document.getElementById("currentTime");
+  const durationEl = document.getElementById("duration");
+
+  // Play / Pause
+  btnPlayPause.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btnPlayPause.textContent = "Pause";
+      btnPlayPause.classList.remove("play");
+      btnPlayPause.classList.add("pause");
+    } else {
+      audio.pause();
+      btnPlayPause.textContent = "Play";
+      btnPlayPause.classList.remove("pause");
+      btnPlayPause.classList.add("play");
+    }
+  });
+
+  // Actualizar duración
+  audio.addEventListener("loadedmetadata", () => {
+    durationEl.textContent = formatTime(audio.duration);
+    seekBar.max = audio.duration;
+  });
+
+  // Actualizar barra de progreso mientras se reproduce
+  audio.addEventListener("timeupdate", () => {
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    seekBar.value = audio.currentTime;
+  });
+
+  // Cambiar posición con la barra
+  seekBar.addEventListener("input", () => {
+    audio.currentTime = seekBar.value;
+  });
+
+  function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60).toString().padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  }
