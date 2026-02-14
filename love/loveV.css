@@ -30,8 +30,8 @@ body {
 	z-index: 1;
 }
 
-.heart-carta > img {
-	width: 50px;
+.heart-carta > svg {
+	width: 100px;
 	height: auto;
 }
 
@@ -56,7 +56,7 @@ body {
     overflow-y: auto;
 }
 
-.heart > img:hover {
+.heart > svg:hover {
 	animation-name: beat;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
@@ -68,25 +68,25 @@ body {
 
 @keyframes beat {
 	0% {
-		width: 50px;
+		width: 100px;
 	}
 	25% {
-		width: 58px;
+		width: 115px;
 	}
 	30% {
-		width: 50px;
+		width: 100px;
 	}
 	50% {
-		width: 45px;
+		width: 90px;
 	}
 	60% {
-		width: 50px;
+		width: 100px;
 	}
 	75% {
-		width: 58px;
+		width: 115px;
 	}
 	100% {
-		width: 50px;
+		width: 100px;
 	}
 }
 
@@ -151,7 +151,7 @@ body {
 	animation-fill-mode: forwards;
 }
 
-.beating > img {
+.beating > svg {
 	animation-name: beat;
 	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
